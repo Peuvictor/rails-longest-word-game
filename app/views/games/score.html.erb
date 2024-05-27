@@ -1,0 +1,18 @@
+<h1>Seu Resultado</h1>
+<p>Sua palavra: <%= @word %></p>
+<p>Letras: <%= @letters.join(', ') %></p>
+
+<% if @included %>
+  <% if @valid_word %>
+    <p>Parabéns! <%= @word %> é uma palavra válida em inglês!</p>
+    <p>Seu score: <%= @score %></p>
+  <% else %>
+    <p>Desculpe, mas <%= @word %> não é uma palavra válida em inglês.</p>
+  <% end %>
+<% else %>
+  <p>Desculpe, mas <%= @word %> não pode ser formada a partir das letras fornecidas.</p>
+<% end %>
+<p>Pontuação total: <%= session[:total_score] %></p>
+
+
+<%= link_to 'Novo Jogo', new_path %>

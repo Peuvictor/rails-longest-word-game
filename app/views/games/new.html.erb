@@ -1,0 +1,10 @@
+<h1>Jogo da Palavra Mais Longa</h1>
+<ul>
+  <% if @letters.present? %>
+    <% @letters.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+  <% else %>
+    <li>No letters available</li>
+  <% end %>
+</ul>
